@@ -68,7 +68,52 @@ class class1Test {
 	void testWhileTask() {
 		assertEquals(4,ob1.whileTask(16));
 	}
+
+	@org.junit.jupiter.api.Test
+	void minmaxTask() {
+		int min,max;
+         min=max=arr[0];
+         for (int i=1; i<arr.length; i++)
+         {
+               min=Math.min(min,arr[i]);
+               max=Math.max(max,arr[i]);
+         }
+         int [] res=new int[2];
+         res[0]=min;
+         res[1]=max;
+         for (int i=1; i<arr.length; i++)
+         {
+         	assertEquals(res[i],minmaxTask(4,1));
+         }
+	}
 	
-	
+	@org.junit.jupiter.api.Test
+	void arrayTask() {
+		Scanner sc = new Scanner(System.in);
+      int size = sc.nextInt();
+      int[] myArray = new int[size];
+      for(int i=0; i<size; i++) {
+         myArray[i] = sc.nextInt();
+      }
+      for(int i=0; i<size; i++) {
+      	assertEquals(myArray[i],arrayTask(13));
+      }
+	}
+
+	@org.junit.jupiter.api.Test
+	void matrixTask() {
+		int[][]newArr=new int[arr.length][arr[0].length];
+    for(int i=0;i<arr.length;i++)
+    {
+        for(int j=0;j<arr[0].length;j++)
+        {
+            newArr[i][j]=arr[i][arr[0].length-1-j];
+        }
+
+    }
+    for(int i=0;i<arr.length;i++) {
+    	assertEquals(newArr[i][j],matrixTask(4,7));
+    }
+	}
 
 }
