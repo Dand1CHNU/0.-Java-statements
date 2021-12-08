@@ -88,9 +88,46 @@ public class class1 {
 		return K;
 	
 	}
+
+	 public static int minmaxTask(int [] arr)
+  {
+         int min,max;
+         min=max=arr[0];
+         for (int i=1; i<arr.length; i++)
+         {
+               min=Math.min(min,arr[i]);
+               max=Math.max(max,arr[i]);
+         }
+         int [] res=new int[2];
+         res[0]=min;
+         res[1]=max;
+         return res;
+}
+
+   public static int[] arrayTask() {
+      Scanner sc = new Scanner(System.in);
+      int size = sc.nextInt();
+      int[] myArray = new int[size];
+      for(int i=0; i<size; i++) {
+         myArray[i] = sc.nextInt();
+      }
+      return myArray;
+   }
 	
+	public int[][] matrixTask(int[][]arr){
+    int[][]newArr=new int[arr.length][arr[0].length];
+    for(int i=0;i<arr.length;i++)
+    {
+        for(int j=0;j<arr[0].length;j++)
+        {
+            newArr[i][j]=arr[i][arr[0].length-1-j];
+        }
+
+    }
+    return newArr; 
+}
+
 	public static void main(String args[]) {
 	}
 }
-
 
